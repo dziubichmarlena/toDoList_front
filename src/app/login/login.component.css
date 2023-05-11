@@ -1,0 +1,98 @@
+
+#loginPage{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 30% 30%;
+    justify-content: center;
+}
+
+
+:host {
+    height:100%;
+    display: flex;
+  }
+
+  #title{
+    width: 100%;
+    display: flex;
+}
+
+#titleParagraph{
+    color: #de483a;
+    font-weight: bolder;
+    font-size: x-large;
+    margin: 0;
+    align-self: center;
+    margin-left: 0.5rem;
+}
+
+#paw{
+    margin-top: 0.4rem;
+}
+
+.mat-mdc-input-element {
+    margin-bottom: 0.3rem;
+    width: 100%;
+}
+
+#logInButton{
+    margin-right: 1.5rem;
+    background-color: #de483a;
+    color: white !important;
+    width: 100%;
+}
+
+#logInButton:hover{
+    background-color: #d34936;
+}
+
+mat-form-field{
+    width: 100%;
+}
+
+#loginForm{
+    margin-right: 5rem;
+}
+
+#loginPhoto{
+    width: 600px;
+    height: 400px;
+    align-self: center;
+}
+
+#photo{
+    display: flex;
+}
+
+#signUpDiv{
+    display: flex;
+}
+
+#signUpParagraph{
+    margin: 0;
+}
+
+#signUpRouter{
+    color: black;
+}
+
+#loginForm{
+    display: flex;
+    flex-direction: column;
+}
+
+#signUpDiv{
+    margin-left: 0.1rem;
+    margin-top: 0.4rem;
+}
+
+#formWrapper{
+    height: 100%;
+    display: grid;
+}
+
+#form{
+    align-self: center;
+    margin-top: -4rem;
+}

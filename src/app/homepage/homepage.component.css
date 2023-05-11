@@ -1,0 +1,59 @@
+#toolbar{
+    position: fixed;
+    top: 0;
+    height: 72px;
+    background-color: #fefdfc;
+    justify-content: flex-end;
+}
+
+.signUpButton{
+    margin-right: 1.5rem;
+    background-color: #de483a;
+    color: white !important;
+}
+
+.signUpButton:hover{
+    background-color: #d34936;
+}
+
+#signInButton{
+    margin-right: 1rem;
+}
+
+#signInButton:hover{
+    background-color: hsla(53,10%,69%,.2);;
+}
+
+#welcomeHeader{
+    text-align: center;
+    margin-top: 8rem;
+    font-size: 48px;
+}
+
+#title{
+    width: 100%;
+    display: flex;
+}
+
+#titleParagraph{
+    color: #de483a;
+    font-weight: bolder;
+    font-size: x-large;
+    margin: 0;
+    align-self: center;
+    margin-left: 0.5rem;
+}
+
+#additionalInfoHeader{
+    text-align: center;
+    font-weight: lighter;
+}
+
+#paw{
+    margin-top: 0.4rem;
+}
+
+.buttonDiv{
+    display: flex;
+    justify-content: center;
+}

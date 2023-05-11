@@ -1,0 +1,33 @@
+<div id="loginPage">
+    <div id="loginForm">
+        <div id="title">
+            <img src="/assets/images/pawprint.png" alt="pawprint" id="paw">
+            <p id="titleParagraph">catodo</p>
+          </div>
+        <div id="formWrapper">
+            <div id="form">
+                <h2>Zaloguj się</h2><br>
+                <div>
+                    <form (ngSubmit)="userLogin()">
+                        <mat-form-field>
+                            <input matInput placeholder="Login" type="text" name="login" id="login" [(ngModel)] = "user.login">
+                        </mat-form-field>
+                        <br><br>
+                        <mat-form-field>
+                            <input matInput placeholder="Hasło" type="password" name="password" id="password" [(ngModel)] = "user.password">
+                        </mat-form-field>
+                        <br><br>
+                        <button mat-button type="submit" id="logInButton">Zaloguj się</button>
+                    </form>
+                </div>
+                <div id="signUpDiv">
+                    <p id="signUpParagraph">Nie masz konta?</p>&nbsp;<a id="signUpRouter" routerLink="/rejestracja" >Zarejestruj się</a>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <div id="photo">
+        <img src="/assets/images/login.jpg" alt="login" id="loginPhoto">
+    </div>
+</div>
