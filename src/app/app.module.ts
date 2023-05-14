@@ -12,12 +12,17 @@ import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SignupComponent } from './signup/signup.component';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
+import { TodopageComponent } from './todopage/todopage.component';
+import { MatIconModule } from '@angular/material/icon';
+import {MatMenuModule} from '@angular/material/menu';
+import {MatTooltipModule} from '@angular/material/tooltip';
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     HomepageComponent,
-    SignupComponent
+    SignupComponent,
+    TodopageComponent
   ],
   imports: [
     BrowserAnimationsModule, 
@@ -27,7 +32,10 @@ import { HttpClientModule, HttpClient } from '@angular/common/http';
     MatButtonModule, 
     MatInputModule, 
     FormsModule, 
-    HttpClientModule
+    HttpClientModule, 
+    MatIconModule, 
+    MatMenuModule, 
+    MatTooltipModule
   ],
   providers: [],
   bootstrap: [AppComponent]

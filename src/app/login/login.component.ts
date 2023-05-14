@@ -29,12 +29,10 @@ export class LoginComponent {
       const payload = result.token.split('.')[1];
       const base64 = atob(payload);
       const tokenObject = JSON.parse(base64);
-      const id = this.user.id;
 
       localStorage.setItem('token', result.token);
       localStorage.setItem('login', tokenObject.iss);
-      localStorage.setItem('id', String(id));
-        this.router.navigate(["/rejestracja"]);
+        this.router.navigate(["/zadania"]);
 
     } catch {
       this.anyErrors = true;

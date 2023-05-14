@@ -1,0 +1,30 @@
+#todoToolbar{
+    background-color: #de483a;
+    height: 44px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+.toolbarButton{
+    color: white !important;
+    font-size: xx-large;
+    border-radius: 50%;
+    width: 50px !important;
+    min-width: 10px !important;
+    height: 40px;
+}
+
+.toolbarButton:hover{
+    background-color: hsla(0,0%,100%,0.2);
+}
+
+#logoutIcon{
+    color: white;
+    font-weight: bolder;
+}
+
+#logoutButton{
+    display: flex;
+    justify-content: end;
+}
