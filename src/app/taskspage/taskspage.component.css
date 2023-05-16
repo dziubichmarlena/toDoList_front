@@ -28,3 +28,41 @@
     display: flex;
     justify-content: end;
 }
+
+.mat-toolbar{
+    background-color: white !important;
+}
+
+#whitepaw{
+    width: 100%;
+    display: flex;
+}
+
+#whitepawImage{
+    align-self: center;
+    margin-left: 0.5rem;
+}
+
+#sidenav{
+    height: 100%;
+    width: 305px;
+    background-color: #fafafa;
+}
+
+#sidenavContent{
+    background-color: white;
+    height: 100%;
+}
+
+#sidenavDiv{
+    height: 93%;
+    margin-top: -1.2rem;
+}
+
+#sidenavContainer{
+    height: 100%;
+}
+
+.mat-drawer-side{
+    border-right: none ;
+}

@@ -2,12 +2,11 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-todopage',
-  templateUrl: './todopage.component.html',
-  styleUrls: ['./todopage.component.css']
+  selector: 'app-taskspage',
+  templateUrl: './taskspage.component.html',
+  styleUrls: ['./taskspage.component.css']
 })
-export class TodopageComponent {
-
+export class TaskspageComponent {
   constructor(private router: Router){}
 
 
@@ -15,5 +14,6 @@ export class TodopageComponent {
     localStorage.clear();
     this.router.navigate(['/logowanie']);
   }
+
 
 }
