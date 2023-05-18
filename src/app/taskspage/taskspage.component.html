@@ -4,9 +4,9 @@
             <img src="/assets/images/whitepaw.png" alt="whitepaw" id="whitepawImage">
         </div>
         <button mat-button class="toolbarButton">
-            <span matTooltip="Dodaj zadanie">+</span>
+            <span matTooltip="Dodaj zadanie" (click)="openDialog()">+</span>
         </button>
-        <button mat-button class="toolbarButton" id="logoutButton"><mat-icon id="logoutIcon">logout</mat-icon>
+        <button mat-button class="toolbarButton" id="logoutButton" (click)="logout()"><mat-icon id="logoutIcon">logout</mat-icon>
         </button>
     </mat-toolbar-row>
 </mat-toolbar>
@@ -17,6 +17,7 @@
         </mat-sidenav>
         <mat-sidenav-content id="sidenavContent">
             siemka
+            <router-outlet></router-outlet>
         </mat-sidenav-content>
     </mat-sidenav-container>
 </div>

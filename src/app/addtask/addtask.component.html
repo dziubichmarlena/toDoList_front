@@ -1,0 +1,30 @@
+<div mat-dialog-content id="addTaskDialog">
+    <form id="addTaskForm">
+        <div>
+            <mat-form-field id="taskContent">
+                <input matInput placeholder="Treść zadania" type="text" name="login" id="login">
+            </mat-form-field>
+        </div>
+        <div id="taskDetails">
+            <mat-form-field id="taskDate">
+                <input matInput [matDatepicker]="picker" placeholder="Data">
+                <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle> 
+                <mat-datepicker #picker panelClass="datePicker"></mat-datepicker>
+            </mat-form-field>
+            <mat-form-field id="prioritySelect">
+                <mat-select placeholder="Priorytet">
+                    <mat-option value=1>Bardzo ważne</mat-option>
+                    <mat-option value=2>Neutralne</mat-option>
+                    <mat-option value=3>Mało ważne</mat-option>
+                </mat-select>
+            </mat-form-field>
+           
+        </div>
+        <mat-divider></mat-divider>
+        <div id="buttons">
+            <button mat-button id="cancelButton" (click)="closeDialog()">Anuluj</button>
+            <button mat-button type="submit" id="addTaskButton">Dodaj zadanie</button>
+        </div>
+
+    </form>
+</div>

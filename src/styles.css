@@ -1,32 +1,33 @@
-@import url("https://fonts.googleapis.com/icon?family=Material+Icons"); 
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
 /* You can add global styles to this file, and also import other style files */
-html{
+html {
     height: 100%;
     width: 100%;
 }
 
-body{
+body {
     height: 100%;
     width: 100%;
     margin: 0 !important;
 }
 
-*{
-    font-family: "Graphik Web","Helvetica Neue",Helvetica,Arial,sans-serif;
+* {
+    font-family: "Graphik Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-button{
+button {
     font-weight: bold;
 }
 
 mat-tooltip-component .mdc-tooltip__surface {
     background-color: rgb(36, 36, 36);
     color: white;
-    border-radius: 10px; 
+    border-radius: 10px;
 }
 
-.mdc-text-field--filled:not(.mdc-text-field--disabled){
+.mdc-text-field--filled:not(.mdc-text-field--disabled) {
     background-color: white !important;
 }
 
@@ -34,6 +35,50 @@ mat-tooltip-component .mdc-tooltip__surface {
     border-bottom-color: var(--mdc-theme-primary, rgba(0, 0, 0, 0.244));
 }
 
-.mat-mdc-form-field:hover{
+.mat-mdc-form-field:hover {
     background-color: white !important;
+}
+
+.datePicker .mat-calendar-body-today:not(.mat-calendar-body-selected) {
+    color: white;
+}
+
+.mat-focus-indicator:hover {
+    background-color: #de483a !important;
+    color: white;
+}
+
+.mat-calendar-body-today {
+    background-color: #de483a !important;
+}
+
+.mat-calendar-body-selected {
+    background-color: #de483a !important;
+    color: white !important;
+}
+
+.mat-calendar-body-cell-content .mat-focus-indicator {
+    background-color: #de483a !important;
+    
+}
+
+
+.mat-calendar-body-cell:not(.mat-calendar-body-disabled):hover>.mat-calendar-body-cell-content:not(.mat-calendar-body-selected):not(.mat-calendar-body-comparison-identical) {
+    background-color: hsl(5, 71%, 55%);
+}
+
+.mat-mdc-select-arrow-wrapper, .mat-datepicker-toggle-default-icon{
+    filter: saturate(0%);
+}
+
+.mat-primary .mat-pseudo-checkbox-checked.mat-pseudo-checkbox-minimal::after, .mat-primary .mat-pseudo-checkbox-indeterminate.mat-pseudo-checkbox-minimal::after{
+    color:hsl(5, 71%, 55%);
+}
+
+.mat-primary .mat-mdc-option.mdc-list-item--selected:not(.mdc-list-item--disabled) .mdc-list-item__primary-text{
+    color: #de483a;
+}
+
+.mat-mdc-text-field-wrapper.mdc-text-field.ng-tns-c13-2.mdc-text-field--filled.mdc-text-field--no-label{
+    min-height: 50px;
 }

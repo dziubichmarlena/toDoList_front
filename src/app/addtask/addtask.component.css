@@ -1,0 +1,44 @@
+#addTaskDialog{
+    width: 500px;
+}
+
+#taskContent{
+    width: 100%;
+}
+
+#taskDate{
+    width: 40%;
+    height: 70px;
+}
+
+#taskDetails{
+    display: flex;
+}
+
+
+#prioritySelect{
+    height: 70px;
+    width: 40%;
+    margin-left: 1.1rem;
+}
+
+#addTaskButton{
+    background-color: #de483a;
+    color: white;
+    margin-left: 1.1rem;
+}
+
+#addTaskButton:hover{
+    background-color: #d34936;
+}
+
+#buttons{
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 1.2rem;
+}
+
+#cancelButton{
+    background-color: hsla(53,10%,69%,.2);
+}
+

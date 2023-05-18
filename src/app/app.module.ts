@@ -8,7 +8,7 @@ import {MatButtonModule} from '@angular/material/button';
 import { LoginComponent } from './login/login.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { MatInputModule } from '@angular/material/input';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SignupComponent } from './signup/signup.component';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
@@ -18,6 +18,14 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { TaskspageComponent } from './taskspage/taskspage.component';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
+import { AddtaskComponent } from './addtask/addtask.component';
+import { MatDialogModule } from "@angular/material/dialog";
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatFormFieldModule } from "@angular/material/form-field";
+import { MatNativeDateModule } from '@angular/material/core';
+import {MAT_DATE_LOCALE} from '@angular/material/core';
+import {MatSelectModule} from '@angular/material/select';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,6 +33,7 @@ import { MatListModule } from '@angular/material/list';
     HomepageComponent,
     SignupComponent,
     TaskspageComponent,
+    AddtaskComponent,
   ],
   imports: [
     BrowserAnimationsModule, 
@@ -39,9 +48,15 @@ import { MatListModule } from '@angular/material/list';
     MatMenuModule, 
     MatTooltipModule, 
     MatSidenavModule, 
-    MatListModule
+    MatListModule, 
+    MatDialogModule, 
+    MatDatepickerModule, 
+    MatFormFieldModule, 
+    ReactiveFormsModule, 
+    MatNativeDateModule, 
+    MatSelectModule
   ],
-  providers: [],
+  providers: [{ provide: MAT_DATE_LOCALE, useValue: 'pl-PL' }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
