@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { lastValueFrom } from 'rxjs';
+import { Observable, lastValueFrom } from 'rxjs';
 import { HttpHeaders } from '@angular/common/http';
 
 @Injectable({
@@ -28,9 +28,22 @@ export class TaskService {
     
     return result;
   }
+
+  saveTask(task: Task) : Observable<any>{
+    const headerDict = {
+      'Authorization': `Bearer ${localStorage.getItem('token')}`
+    }
+    
+    const requestOptions = {                                                                                                                                                                                 
+      headers: new HttpHeaders(headerDict), 
+    };
+  
+    return this.http.post<Task>(`${this.baseUrl}/addTask`, task, requestOptions);
+  }
 }
 
 export class Task{
   date!: Date;
-  content!: string;
+  taskContent!: string;
 }
+

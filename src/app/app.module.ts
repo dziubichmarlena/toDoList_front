@@ -25,6 +25,12 @@ import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatNativeDateModule } from '@angular/material/core';
 import {MAT_DATE_LOCALE} from '@angular/material/core';
 import {MatSelectModule} from '@angular/material/select';
+import { LOCALE_ID } from '@angular/core';
+import { CapitalizePipe } from './capitalize.pipe';
+import localePl from '@angular/common/locales/pl';
+import { registerLocaleData } from '@angular/common';
+registerLocaleData(localePl);
+
 
 @NgModule({
   declarations: [
@@ -34,6 +40,7 @@ import {MatSelectModule} from '@angular/material/select';
     SignupComponent,
     TaskspageComponent,
     AddtaskComponent,
+    CapitalizePipe
   ],
   imports: [
     BrowserAnimationsModule, 
@@ -56,7 +63,7 @@ import {MatSelectModule} from '@angular/material/select';
     MatNativeDateModule, 
     MatSelectModule
   ],
-  providers: [{ provide: MAT_DATE_LOCALE, useValue: 'pl-PL' }],
+  providers: [{ provide: MAT_DATE_LOCALE, useValue: 'pl-PL' }, { provide: LOCALE_ID, useValue: "pl-PL" }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

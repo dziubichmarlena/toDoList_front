@@ -6,7 +6,8 @@
         <button mat-button class="toolbarButton">
             <span matTooltip="Dodaj zadanie" (click)="openDialog()">+</span>
         </button>
-        <button mat-button class="toolbarButton" id="logoutButton" (click)="logout()"><mat-icon id="logoutIcon">logout</mat-icon>
+        <button mat-button class="toolbarButton" id="logoutButton" (click)="logout()"><mat-icon
+                id="logoutIcon">logout</mat-icon>
         </button>
     </mat-toolbar-row>
 </mat-toolbar>
@@ -16,10 +17,23 @@
             siema
         </mat-sidenav>
         <mat-sidenav-content id="sidenavContent">
-            siemka
+            <div id="wrapperDiv">
+                <div id="header">
+                    <h2 id="taskHeader">Twoje zadania</h2>
+                    <mat-divider class="divider"></mat-divider>
+                </div>
+                <div *ngFor="let task of tasks">
+                    <div class="taskContainer">
+                      {{task.taskContent | capitalize}}<br>
+                      <div class="dateDiv">
+                        {{task.date | date: 'dd MMM yyyy'}}
+                      </div>
+                    </div>
+                    <mat-divider class="divider"></mat-divider>
+                </div>
+            </div>
+            
             <router-outlet></router-outlet>
         </mat-sidenav-content>
     </mat-sidenav-container>
 </div>
-  
-

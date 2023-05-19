@@ -79,6 +79,7 @@ mat-tooltip-component .mdc-tooltip__surface {
     color: #de483a;
 }
 
-.mat-mdc-text-field-wrapper.mdc-text-field.ng-tns-c13-2.mdc-text-field--filled.mdc-text-field--no-label{
-    min-height: 50px;
+.mat-mdc-text-field-wrapper.mdc-text-field.ng-tns-c13-2.mdc-text-field--filled.mdc-text-field--no-label, 
+.mat-mdc-text-field-wrapper.mdc-text-field.ng-tns-c13-3.mdc-text-field--filled.mdc-text-field--no-label{
+    min-height: 3.5rem;
 }

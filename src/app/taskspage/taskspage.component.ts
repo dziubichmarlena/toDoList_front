@@ -13,8 +13,8 @@ export class TaskspageComponent implements OnInit {
   tasks: Task[] = [];
   constructor(private router: Router,
     private taskService: TaskService,
-    private dialog: MatDialog
-  ) { }
+    private dialog: MatDialog) { 
+  }
 
   async ngOnInit() {
     this.tasks = await this.taskService.getTask();
@@ -31,6 +31,9 @@ export class TaskspageComponent implements OnInit {
       position: {
         top: '100px'
       }
+    }); 
+    dialogRef.afterClosed().subscribe(result => {
+      this.tasks.push(result);
     });
   }
 
