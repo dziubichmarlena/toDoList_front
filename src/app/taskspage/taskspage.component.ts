@@ -11,6 +11,7 @@ import { AddtaskComponent } from '../addtask/addtask.component';
 })
 export class TaskspageComponent implements OnInit {
   tasks: Task[] = [];
+
   constructor(private router: Router,
     private taskService: TaskService,
     private dialog: MatDialog) { 
@@ -26,15 +27,20 @@ export class TaskspageComponent implements OnInit {
     this.router.navigate(['/logowanie']);
   }
 
-  openDialog(): void{
+   openDialog(){
     const dialogRef = this.dialog.open(AddtaskComponent, {
       position: {
         top: '100px'
       }
     }); 
-    dialogRef.afterClosed().subscribe(result => {
-      this.tasks.push(result);
+     dialogRef.afterClosed().subscribe(async (result) => {
+      this.tasks = await this.taskService.getTask()
     });
   }
 
+  onSelected(task: Task, selectedPriority: number, selectedAction: number){
+    task.priority = selectedPriority;
+    task.actionOnTask = selectedAction;
+    this.taskService.updateTask(task.id, selectedPriority, selectedAction).subscribe();
+  }
 }

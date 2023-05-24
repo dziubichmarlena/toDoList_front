@@ -12,10 +12,10 @@
                 <mat-datepicker #picker panelClass="datePicker"></mat-datepicker>
             </mat-form-field>
             <mat-form-field id="prioritySelect">
-                <mat-select placeholder="Priorytet">
-                    <mat-option value=1>Bardzo ważne</mat-option>
-                    <mat-option value=2>Neutralne</mat-option>
-                    <mat-option value=3>Mało ważne</mat-option>
+                <mat-select placeholder="Priorytet" [(ngModel)]="task.priority" name="priority">
+                    <mat-option value=1><mat-icon class="neutral">flag</mat-icon>Neutralne</mat-option>
+                    <mat-option value=2><mat-icon class="important">flag</mat-icon>Ważne</mat-option>
+                    <mat-option value=3><mat-icon class="veryImportant">flag</mat-icon>Bardzo ważne</mat-option>
                 </mat-select>
             </mat-form-field>
         </div>

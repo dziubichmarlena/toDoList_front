@@ -83,3 +83,34 @@ mat-tooltip-component .mdc-tooltip__surface {
 .mat-mdc-text-field-wrapper.mdc-text-field.ng-tns-c13-3.mdc-text-field--filled.mdc-text-field--no-label{
     min-height: 3.5rem;
 }
+
+
+.mdc-text-field .mdc-text-field__input {
+       caret-color: #de483a;
+}
+
+.mat-mdc-select-arrow{
+    visibility: hidden !important;
+}
+
+
+.mat-pseudo-checkbox-checked.mat-pseudo-checkbox-minimal::after,
+.mat-pseudo-checkbox-indeterminate.mat-pseudo-checkbox-minimal::after{
+    color: #de483a;
+}
+
+
+.mat-mdc-select-value{
+    margin-top: -0.5rem;
+    text-align: initial;
+    font-size: small;
+}
+
+.mdc-list-item--selected .mdc-list-item__primary-text, .mdc-list-item--activated .mdc-list-item__primary-text{
+    color: #de483a;
+}
+
+.mdc-list-item__primary-text{
+    font-weight: small !important;
+}
+

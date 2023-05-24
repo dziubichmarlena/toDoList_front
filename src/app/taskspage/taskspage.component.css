@@ -106,7 +106,85 @@
     flex-direction: column;
 }
 
-.dateDiv{
+.div{
     margin-top: 0.2rem;
     font-size: smaller;
+    display: flex;
+}
+
+.calendarIcon{
+    font-size: 1rem;
+    color: #de483a;
+}
+
+.date{
+    margin-left: -0.2rem;
+    margin-top: 0.1rem;
+    width: 100%;
+}
+
+.case{
+   width: 15rem;
+   text-align: center;
+   display: flex;
+   flex-direction: row;
+   margin-left: 1rem;
+}
+
+
+.redFlag{
+    color: rgb(224, 22, 22);
+    font-size: 1rem;
+    margin-top: -0.2rem;
+
+}
+
+.yellowFlag{
+    color: rgb(241, 241, 109);
+    font-size: 1rem;
+    margin-top: -0.2rem;
+}
+
+.orangeFlag{
+    color:  #dd7162;
+    font-size: 1rem;
+    margin-top: -0.2rem;
+}
+
+
+.flagDiv{
+    margin-top: 0.2rem;
+    font-size: small;
+}
+
+.neutral{
+    color: rgb(241, 241, 109);
+}
+
+.important{
+    color: #dd7162;
+}
+
+.veryImportant{
+    color: rgb(224, 22, 22);
+}
+
+.actionCase{
+    width: 15rem;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    margin-left: -5rem;
+}
+
+.dateDiv{
+    display: flex;
+    flex-direction: row;
+    width: 8rem;
+}
+
+.update{
+    font-size: 1.2rem;
+    color: #de483a;
+    margin-top: -0.2rem;
 }

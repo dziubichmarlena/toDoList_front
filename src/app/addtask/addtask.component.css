@@ -18,7 +18,7 @@
 
 #prioritySelect{
     height: 70px;
-    width: 40%;
+    width: 50%;
     margin-left: 1.1rem;
 }
 
@@ -42,3 +42,14 @@
     background-color: hsla(53,10%,69%,.2);
 }
 
+.neutral{
+    color: rgb(241, 241, 109)
+}
+
+.important{
+    color: #dd7162;
+}
+
+.veryImportant{
+    color: rgb(224, 22, 22);
+}
