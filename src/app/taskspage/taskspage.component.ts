@@ -11,7 +11,7 @@ import { AddtaskComponent } from '../addtask/addtask.component';
 })
 export class TaskspageComponent implements OnInit {
   tasks: Task[] = [];
-
+  
   constructor(private router: Router,
     private taskService: TaskService,
     private dialog: MatDialog) { 
@@ -43,4 +43,11 @@ export class TaskspageComponent implements OnInit {
     task.actionOnTask = selectedAction;
     this.taskService.updateTask(task.id, selectedPriority, selectedAction).subscribe();
   }
+
+  deleteTask(taskId: number){
+    this.taskService.deleteTask(taskId).subscribe(async() =>
+    this.tasks = await this.taskService.getTask()
+    );
+  }
+
 }

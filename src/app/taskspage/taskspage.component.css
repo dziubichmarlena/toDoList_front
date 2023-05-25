@@ -188,3 +188,59 @@
     color: #de483a;
     margin-top: -0.2rem;
 }
+
+
+.disable{
+    width: 15rem;
+   text-align: center;
+   display: flex;
+   flex-direction: row;
+   margin-left: 1rem;
+   pointer-events: none;
+   opacity: 0.6;
+}
+
+.disabledTaskContent{
+    width: 98.5%;
+    pointer-events: none;
+    opacity: 0.6;
+}
+
+.taskContent{
+    width: 98.5%;
+}
+
+.disabledDateDiv{
+    display: flex;
+    flex-direction: row;
+    width: 8rem;
+    pointer-events: none;
+    opacity: 0.6;
+}
+
+.disableActionCase{
+    width: 15rem;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    margin-left: -5rem;
+    pointer-events: none;
+    opacity: 0.6;
+}
+
+.taskContentDiv{
+    display: flex;
+    width: 100%;
+}
+
+.deleteButton{
+    height: 1rem;
+    margin-right: -1.8rem;
+    max-width: 2.5rem;
+    margin-top: 0.4rem;
+    margin-bottom: -1rem;
+}
+
+.deleteIcon{
+    color: #de483a;
+}

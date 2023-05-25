@@ -9,12 +9,13 @@
 #taskDate{
     width: 40%;
     height: 70px;
+    min-height: 70px;
+    max-height: 70px;
 }
 
 #taskDetails{
     display: flex;
 }
-
 
 #prioritySelect{
     height: 70px;

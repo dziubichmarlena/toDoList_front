@@ -114,3 +114,8 @@ mat-tooltip-component .mdc-tooltip__surface {
     font-weight: small !important;
 }
 
+
+.mat-mdc-button, .mat-mdc-outlined-button{
+    --mat-mdc-button-persistent-ripple-color: white !important;
+}
+

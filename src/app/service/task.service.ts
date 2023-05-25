@@ -54,6 +54,18 @@ export class TaskService {
   
     return this.http.put<Task>(`${this.baseUrl}/tasks/${taskId}`, { taskPriority, actionOnTask }, requestOptions);
   }
+
+  deleteTask(taskId: number){
+    const headerDict = {
+      'Authorization': `Bearer ${localStorage.getItem('token')}`
+    }
+    
+    const requestOptions = {                                                                                                                                                                                 
+      headers: new HttpHeaders(headerDict), 
+    };
+
+    return this.http.delete<Task>(`${this.baseUrl}/tasks/${taskId}`, requestOptions)
+  }
 }
 
 export class Task{

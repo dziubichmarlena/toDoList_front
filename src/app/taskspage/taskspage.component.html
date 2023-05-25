@@ -24,11 +24,18 @@
                 </div>
                 <div *ngFor="let task of tasks">
                     <div class="taskContainer">
-                        <div class="taskContent">
-                            {{task.taskContent | capitalize}}<br>
+                        <div class="taskContentDiv">
+                            <div [ngClass] = "task.actionOnTask == 3? 'disabledTaskContent':'taskContent'">
+                                {{task.taskContent | capitalize}}<br>
+                            </div>
+                            <div class="deleteButtonDiv">
+                                <button mat-button class="deleteButton" (click)="deleteTask(task.id)"><mat-icon class="deleteIcon">delete_outline</mat-icon>
+                                </button>
+                            </div>
                         </div>
+                        
                         <div class="div">
-                            <div class="dateDiv">
+                            <div [ngClass] = "task.actionOnTask == 3? 'disabledDateDiv':'dateDiv'">
                                 <div>
                                     <mat-icon class="calendarIcon">calendar_today</mat-icon>
                                 </div>
@@ -36,9 +43,8 @@
                                     {{task.date | date: 'dd MMM yyyy'}}
                                 </div>
                             </div>
-
                             <div [ngSwitch]="task.priority">
-                                <div *ngSwitchCase=1 class="case">
+                                <div *ngSwitchCase=1 [ngClass] = "task.actionOnTask == 3? 'disable':'case'">
                                     <div class="flagDiv">
                                         <mat-icon class="yellowFlag">flag</mat-icon>
                                     </div>
@@ -51,7 +57,7 @@
                                             ważne</mat-option>
                                     </mat-select>
                                 </div>
-                                <div *ngSwitchCase=2 class="case">
+                                <div *ngSwitchCase=2 [ngClass] = "task.actionOnTask == 3? 'disable':'case'">
                                     <div class="flagDiv">
                                         <mat-icon class="orangeFlag">flag</mat-icon>
                                     </div>
@@ -64,7 +70,7 @@
                                             ważne</mat-option>
                                     </mat-select>
                                 </div>
-                                <div *ngSwitchCase=3 class="case">
+                                <div *ngSwitchCase=3 [ngClass] = "task.actionOnTask == 3? 'disable':'case'">
                                     <div class="flagDiv">
                                         <mat-icon class="redFlag">flag</mat-icon>
                                     </div>
@@ -99,7 +105,7 @@
                                         <mat-option value=3><mat-icon>done</mat-icon>Zakończone</mat-option>
                                     </mat-select>
                                 </div>
-                                <div *ngSwitchCase=3 class="actionCase">
+                                <div *ngSwitchCase=3 [ngClass] = "task.actionOnTask == 3? 'disableActionCase':'actionCase'">
                                     <div class="flagDiv">
                                         <mat-icon class="update">update</mat-icon>
                                     </div>
