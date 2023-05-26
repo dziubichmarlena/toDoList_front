@@ -1,7 +1,7 @@
 <mat-toolbar>
     <mat-toolbar-row id="todoToolbar">
         <div id="whitepaw">
-            <img src="/assets/images/whitepaw.png" alt="whitepaw" id="whitepawImage">
+            <img src="/assets/images/whitepaw.png" alt="whitepaw" id="whitepawImage" (click)="navigateToMain()">
         </div>
         <button mat-button class="toolbarButton">
             <span matTooltip="Dodaj zadanie" (click)="openDialog()">+</span>
@@ -14,10 +14,16 @@
 <div id="sidenavDiv">
     <mat-sidenav-container id="sidenavContainer">
         <mat-sidenav mode="side" opened id="sidenav">
-            siema
+            <mat-list>
+                <mat-list-item class="listItemButton">
+                    <button mat-button class="matListItemButton" routerLink="/zadania/historia" [class.focusedItemButton]="currentUrl == '/zadania/historia'">
+                        <mat-icon class="matListItemIcon">done</mat-icon> Zadania zakończone
+                    </button>
+                </mat-list-item>
+            </mat-list>
         </mat-sidenav>
         <mat-sidenav-content id="sidenavContent">
-            <div id="wrapperDiv">
+            <div id="wrapperDiv" *ngIf="router.url == '/zadania'">
                 <div id="header">
                     <h2 id="taskHeader">Twoje zadania</h2>
                     <mat-divider class="divider"></mat-divider>
@@ -119,7 +125,6 @@
                     <mat-divider class="divider"></mat-divider>
                 </div>
             </div>
-
             <router-outlet></router-outlet>
         </mat-sidenav-content>
     </mat-sidenav-container>

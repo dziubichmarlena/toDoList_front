@@ -1,8 +1,9 @@
 import { Component, Inject, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, NavigationEnd} from '@angular/router';
 import { Task, TaskService } from '../service/task.service';
 import { MAT_DIALOG_DATA, MatDialog, MatDialogRef } from '@angular/material/dialog';
 import { AddtaskComponent } from '../addtask/addtask.component';
+import { filter } from 'rxjs';
 
 @Component({
   selector: 'app-taskspage',
@@ -11,15 +12,20 @@ import { AddtaskComponent } from '../addtask/addtask.component';
 })
 export class TaskspageComponent implements OnInit {
   tasks: Task[] = [];
+  currentUrl = '';
   
-  constructor(private router: Router,
+  constructor(public router: Router,
     private taskService: TaskService,
     private dialog: MatDialog) { 
+      this.router.events
+      .pipe(filter(event => event instanceof NavigationEnd))
+      .subscribe((x) => {
+        this.currentUrl = (x as NavigationEnd).url;
+      });
   }
 
   async ngOnInit() {
     this.tasks = await this.taskService.getTask();
-    console.log(this.tasks);
   }
 
   logout(): void {
@@ -41,13 +47,18 @@ export class TaskspageComponent implements OnInit {
   onSelected(task: Task, selectedPriority: number, selectedAction: number){
     task.priority = selectedPriority;
     task.actionOnTask = selectedAction;
-    this.taskService.updateTask(task.id, selectedPriority, selectedAction).subscribe();
+    this.taskService.updateTask(task.id, selectedPriority, selectedAction).subscribe(async() => 
+    this.tasks = await this.taskService.getTask());
   }
 
   deleteTask(taskId: number){
     this.taskService.deleteTask(taskId).subscribe(async() =>
     this.tasks = await this.taskService.getTask()
     );
+  }
+
+  navigateToMain(){
+    this.router.navigate(['/zadania']);
   }
 
 }

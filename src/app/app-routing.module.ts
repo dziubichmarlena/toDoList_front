@@ -6,16 +6,22 @@ import { HomepageComponent } from './homepage/homepage.component';
 import { SignupComponent } from './signup/signup.component';
 import { LoginGuard } from './guard/login.guard';
 import { TaskspageComponent } from './taskspage/taskspage.component';
+import { HistoryComponent } from './history/history.component';
 
 
 
 
 
 const routes: Routes = [
-  {path: '', component: HomepageComponent}, 
-  {path: 'logowanie', component: LoginComponent}, 
-  {path: 'rejestracja', component: SignupComponent}, 
-  {path: 'zadania', component: TaskspageComponent, canActivate: [LoginGuard]}
+  { path: '', component: HomepageComponent },
+  { path: 'logowanie', component: LoginComponent },
+  { path: 'rejestracja', component: SignupComponent },
+  {
+    path: 'zadania', component: TaskspageComponent, canActivate: [LoginGuard],
+    children: [
+      {path: 'historia', component: HistoryComponent, canActivate: [LoginGuard]}
+    ]
+  }
 ];
 
 @NgModule({

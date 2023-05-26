@@ -30,6 +30,23 @@ export class TaskService {
     return result;
   }
 
+  async getFilteredTask(actionOnTask: number) : Promise<Task[]>{
+    const headerDict = {
+      'Authorization': `Bearer ${localStorage.getItem('token')}`
+    }
+    
+    const requestOptions = {                                                                                                                                                                                 
+      headers: new HttpHeaders(headerDict)
+    };
+
+    var result = await lastValueFrom(this.http.get<Task[]>(`${this.baseUrl}/tasks/${actionOnTask}`, requestOptions));
+    if (!result) {
+      return [];
+    }
+    
+    return result;
+  }
+
   saveTask(task: Task) : Observable<any>{
     const headerDict = {
       'Authorization': `Bearer ${localStorage.getItem('token')}`
@@ -66,6 +83,8 @@ export class TaskService {
 
     return this.http.delete<Task>(`${this.baseUrl}/tasks/${taskId}`, requestOptions)
   }
+
+
 }
 
 export class Task{

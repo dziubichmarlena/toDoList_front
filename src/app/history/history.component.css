@@ -1,72 +1,3 @@
-#todoToolbar{
-    background-color: #de483a;
-    height: 44px;
-    display: flex;
-    justify-content: flex-end;
-}
-
-
-.toolbarButton{
-    color: white !important;
-    font-size: xx-large;
-    border-radius: 50%;
-    width: 50px !important;
-    min-width: 10px !important;
-    height: 40px;
-}
-
-.toolbarButton:hover{
-    background-color: hsla(0,0%,100%,0.2);
-}
-
-#logoutIcon{
-    color: white;
-    font-weight: bolder;
-}
-
-#logoutButton{
-    display: flex;
-    justify-content: end;
-}
-
-.mat-toolbar{
-    background-color: white !important;
-}
-
-#whitepaw{
-    width: 100%;
-    display: flex;
-}
-
-#whitepawImage{
-    align-self: center;
-    margin-left: 0.5rem;
-}
-
-#sidenav{
-    height: 100%;
-    width: 305px;
-    background-color: #fafafa;
-}
-
-#sidenavContent{
-    background-color: white;
-    height: 100%;
-}
-
-#sidenavDiv{
-    height: 93%;
-    margin-top: -1.2rem;
-}
-
-#sidenavContainer{
-    height: 100%;
-}
-
-.mat-drawer-side{
-    border-right: none ;
-}
-
 .taskContainer{
     width: 60%;
     align-self: center;
@@ -75,10 +6,6 @@
     margin-top: 0.4rem;
 }
 
-#sidenavContent{
-    display: flex;
-    flex-direction: column;
-}
 
 .divider{
     width: 60%;
@@ -110,6 +37,8 @@
     margin-top: 0.2rem;
     font-size: smaller;
     display: flex;
+    pointer-events: none;
+    opacity: 0.6;
 }
 
 .calendarIcon{
@@ -181,6 +110,7 @@
     display: flex;
     flex-direction: row;
     width: 8rem;
+    
 }
 
 .update{
@@ -189,44 +119,12 @@
     margin-top: -0.2rem;
 }
 
-
-.disable{
-    width: 15rem;
-   text-align: center;
-   display: flex;
-   flex-direction: row;
-   margin-left: 1rem;
-   pointer-events: none;
-   opacity: 0.6;
-}
-
-.disabledTaskContent{
-    width: 98.5%;
-    pointer-events: none;
-    opacity: 0.6;
-}
-
 .taskContent{
     width: 98.5%;
-}
-
-.disabledDateDiv{
-    display: flex;
-    flex-direction: row;
-    width: 8rem;
     pointer-events: none;
     opacity: 0.6;
 }
 
-.disableActionCase{
-    width: 15rem;
-    text-align: center;
-    display: flex;
-    flex-direction: row;
-    margin-left: -5rem;
-    pointer-events: none;
-    opacity: 0.6;
-}
 
 .taskContentDiv{
     display: flex;
@@ -246,9 +144,7 @@
 }
 
 .matListItemButton{
-    margin-left: 0.4rem;
     font-size: 1.1rem;
-    width: 16rem;
 }
 
 .listItemButton{
@@ -258,14 +154,4 @@
 .matListItemIcon{
     font-size: 1.4rem !important; 
     margin-top: -0.3rem;
-}
-
-#whitepawImage:hover{
-    cursor: pointer;
-}
-
-.focusedItemButton {
-    color: var(--mdc-list-list-item-label-text-color);
-    background-color: rgb(217, 217, 217);
-    border: none;
 }

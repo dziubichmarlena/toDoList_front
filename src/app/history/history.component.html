@@ -1,0 +1,70 @@
+<div id="wrapperDiv">
+    <div id="header">
+        <h2 id="taskHeader">Historia Twoich zadań</h2>
+        <mat-divider class="divider"></mat-divider>
+    </div>
+    <div *ngFor="let task of doneTasks">
+        <div class="taskContainer">
+            <div class="taskContentDiv">
+                <div class = "taskContent">
+                    {{task.taskContent | capitalize}}<br>
+                </div>
+                <div class="deleteButtonDiv">
+                    <button mat-button class="deleteButton" (click)="deleteTask(task.id)"><mat-icon class="deleteIcon">delete_outline</mat-icon>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="div">
+                <div class = "dateDiv">
+                    <div>
+                        <mat-icon class="calendarIcon">calendar_today</mat-icon>
+                    </div>
+                    <div class="date">
+                        {{task.date | date: 'dd MMM yyyy'}}
+                    </div>
+                </div>
+                <div [ngSwitch]="task.priority">
+                    <div *ngSwitchCase=1 class = "case">
+                        <div class="flagDiv">
+                            <mat-icon class="yellowFlag">flag</mat-icon>
+                        </div>
+                        <mat-select value=1>
+                            <mat-option value=1><mat-icon
+                                    class="neutral">flag</mat-icon>Neutralne</mat-option>
+                        </mat-select>
+                    </div>
+                    <div *ngSwitchCase=2 class = "case">
+                        <div class="flagDiv">
+                            <mat-icon class="orangeFlag">flag</mat-icon>
+                        </div>
+                        <mat-select value=2>
+                            <mat-option value=2><mat-icon
+                                    class="important">flag</mat-icon>Ważne</mat-option>
+                        </mat-select>
+                    </div>
+                    <div *ngSwitchCase=3 class = "case">
+                        <div class="flagDiv">
+                            <mat-icon class="redFlag">flag</mat-icon>
+                        </div>
+                        <mat-select value=3>
+                            <mat-option value=3><mat-icon class="veryImportant">flag</mat-icon>Bardzo
+                                ważne</mat-option>
+                        </mat-select>
+                    </div>
+                </div>
+                <div [ngSwitch]="task.actionOnTask">
+                    <div *ngSwitchCase=3 class = "actionCase">
+                        <div class="flagDiv">
+                            <mat-icon class="update">update</mat-icon>
+                        </div>
+                        <mat-select value=3>
+                            <mat-option value=3><mat-icon>done</mat-icon>Zakończone</mat-option>
+                        </mat-select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <mat-divider class="divider"></mat-divider>
+    </div>
+</div>

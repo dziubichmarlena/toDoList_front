@@ -29,6 +29,7 @@ import { LOCALE_ID } from '@angular/core';
 import { CapitalizePipe } from './capitalize.pipe';
 import localePl from '@angular/common/locales/pl';
 import { registerLocaleData } from '@angular/common';
+import { HistoryComponent } from './history/history.component';
 registerLocaleData(localePl);
 
 
@@ -40,7 +41,8 @@ registerLocaleData(localePl);
     SignupComponent,
     TaskspageComponent,
     AddtaskComponent,
-    CapitalizePipe
+    CapitalizePipe,
+    HistoryComponent
   ],
   imports: [
     BrowserAnimationsModule, 
