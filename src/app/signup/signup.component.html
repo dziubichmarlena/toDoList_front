@@ -1,1 +1,43 @@
-<p>signup works!</p>
+<div id="registerPage">
+    <div id="registerForm">
+        <div id="title" (click)="navigateToMainpage()">
+            <img src="/assets/images/pawprint.png" alt="pawprint" id="paw">
+            <p id="titleParagraph">catodo</p>
+          </div>
+        <div id="formWrapper">
+            <div id="form">
+                <h2>Zarejestruj się</h2><br>
+                <div *ngIf="differentPasswords" class="error">
+                    Sprawdź poprawność wprowadzonych danych
+                </div>
+                <div *ngIf="emptyField" class="error">
+                    Pola nie mogą być puste
+                </div>
+                <div>
+                    <form (ngSubmit)="register(user)">
+                        <mat-form-field>
+                            <input matInput placeholder="Login" type="text" name="login" id="login" [(ngModel)] = "user.login">
+                        </mat-form-field>
+                        <br><br>
+                        <mat-form-field>
+                            <input matInput placeholder="Hasło" type="password" name="password" id="password" [(ngModel)] = "user.password">
+                        </mat-form-field>
+                        <br><br>
+                        <mat-form-field>
+                            <input matInput placeholder="Powtórz hasło" type="password" name="confirmPassword" id="confirmPassword" [(ngModel)]="confirmPassword">
+                        </mat-form-field>
+                        <br><br>
+                        <button mat-button type="submit" id="registerButton">Zarejestruj się</button>
+                    </form>
+                </div>
+                <div id="loginDiv">
+                    <p id="loginParagraph">Masz już konto?</p>&nbsp;<a id="loginRouter" routerLink="/logowanie" >Zaloguj się</a>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <div id="photo">
+        <img src="/assets/images/register.jpg" alt="register" id="registerPhoto">
+    </div>
+</div>

@@ -17,11 +17,6 @@ export class LoginComponent {
 
   }
  
-  // getCredentials(): void{
-  //   console.log(this.user.login);
-  //   console.log(this.user.password);
-  // }
-
   async userLogin() {
     try {
       const result = await lastValueFrom(this.userService.loginUser(this.user));
@@ -37,6 +32,10 @@ export class LoginComponent {
     } catch {
       this.anyErrors = true;
     }
+  }
+
+  navigateToMainpage(){
+    this.router.navigate(["/"]);
   }
 
 }

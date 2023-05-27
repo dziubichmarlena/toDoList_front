@@ -13,9 +13,15 @@ export class UserService {
   loginUser(user: User): Observable<AuthResult> {
     return this.http.post<AuthResult>(`${this.baseUrl}/login`, user);
   }
+
+  register(user: User): Observable<any> {
+    return this.http.post<User>(`${this.baseUrl}/register`, user);
+  }
+
 }
 
-export class User{
+
+export class User {
   id!: number;
   login!: string;
   password!: string;

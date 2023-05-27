@@ -1,12 +1,15 @@
 <div id="loginPage">
     <div id="loginForm">
-        <div id="title">
+        <div id="title" (click)="navigateToMainpage()">
             <img src="/assets/images/pawprint.png" alt="pawprint" id="paw">
             <p id="titleParagraph">catodo</p>
           </div>
         <div id="formWrapper">
             <div id="form">
                 <h2>Zaloguj się</h2><br>
+                <div *ngIf="anyErrors" id="error">
+                Niepoprawny login lub hasło
+            </div>
                 <div>
                     <form (ngSubmit)="userLogin()">
                         <mat-form-field>
