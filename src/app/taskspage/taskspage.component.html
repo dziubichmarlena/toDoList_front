@@ -16,6 +16,11 @@
         <mat-sidenav mode="side" opened id="sidenav">
             <mat-list>
                 <mat-list-item class="listItemButton">
+                    <button mat-button class="matListItemButton" routerLink="/zadania" [class.focusedItemButton]="currentUrl == '/zadania'">
+                        <mat-icon class="matListItemIconProgress">trending_up</mat-icon> Zadania w trakcie
+                    </button>
+                </mat-list-item>
+                <mat-list-item class="listItemButton">
                     <button mat-button class="matListItemButton" routerLink="/zadania/historia" [class.focusedItemButton]="currentUrl == '/zadania/historia'">
                         <mat-icon class="matListItemIcon">done</mat-icon> Zadania zakończone
                     </button>

@@ -30,6 +30,8 @@ import { CapitalizePipe } from './capitalize.pipe';
 import localePl from '@angular/common/locales/pl';
 import { registerLocaleData } from '@angular/common';
 import { HistoryComponent } from './history/history.component';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { NotificationdialogComponent } from './notificationdialog/notificationdialog.component';
 registerLocaleData(localePl);
 
 
@@ -42,7 +44,8 @@ registerLocaleData(localePl);
     TaskspageComponent,
     AddtaskComponent,
     CapitalizePipe,
-    HistoryComponent
+    HistoryComponent,
+    NotificationdialogComponent
   ],
   imports: [
     BrowserAnimationsModule, 
@@ -63,7 +66,8 @@ registerLocaleData(localePl);
     MatFormFieldModule, 
     ReactiveFormsModule, 
     MatNativeDateModule, 
-    MatSelectModule
+    MatSelectModule, 
+    MatSnackBarModule
   ],
   providers: [{ provide: MAT_DATE_LOCALE, useValue: 'pl-PL' }, { provide: LOCALE_ID, useValue: "pl-PL" }],
   bootstrap: [AppComponent]

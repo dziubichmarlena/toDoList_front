@@ -54,3 +54,8 @@
 .veryImportant{
     color: rgb(224, 22, 22);
 }
+
+#error{
+    color: red;
+    font-weight: bold;
+}

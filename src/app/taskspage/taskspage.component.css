@@ -269,3 +269,11 @@
     background-color: rgb(217, 217, 217);
     border: none;
 }
+
+.mat-icon.notranslate.matListItemIconProgress.material-icons.mat-ligature-font.mat-icon-no-color{
+    margin-left: -1.5rem;
+}
+
+.matListItemIconProgress{
+    font-size: larger;
+}
